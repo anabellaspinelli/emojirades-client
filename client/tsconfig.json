@@ -26,5 +26,5 @@
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"]
+  "include": ["../src"]
 }
