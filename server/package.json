@@ -1,0 +1,36 @@
+{
+  "name": "ts-node-starter",
+  "version": "1.0.0",
+  "description": "Basic setup of a Node project with Typescript",
+  "main": "src/index.ts",
+  "repository": "https://github.com/anabellaspinelli/ts-node-starter.git",
+  "author": "Anabella <anabellaspinelli@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "test": "jest",
+    "compile": "tsc"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.10",
+    "@types/socket.io": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "babel-jest": "^27.3.1",
+    "cors": "^2.8.5",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "express": "^4.18.1",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
