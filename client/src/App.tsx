@@ -1,19 +1,7 @@
 import './App.css';
 import { io, Socket } from 'socket.io-client';
 import { useEffect, useState } from 'react';
-
-interface ServerToClientEvents {
-  receive_message: (message: Message) => void;
-}
-
-interface ClientToServerEvents {
-  send_message: (message: string) => void;
-}
-
-interface Message {
-  text: string;
-  sender: string;
-}
+import { ClientToServerEvents, Message, ServerToClientEvents } from 'lib/types';
 
 const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io(
   'http://localhost:3001'
@@ -31,11 +19,11 @@ function App(): JSX.Element | null {
   };
 
   const sendMessage = () => {
-    socket.emit('send_message', message);
+    socket.emit('message', message);
   };
 
   useEffect(() => {
-    socket.on('receive_message', (message) => {
+    socket.on('message', (message) => {
       pushMessageToLog(message);
       console.log(message.text);
     });
